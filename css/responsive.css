@@ -1,0 +1,430 @@
+@media (max-width: 1050px) {
+    :root {
+        --page-width: 900px;
+    }
+
+    .hero-glow {
+        display: none;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr .9fr;
+        gap: 1rem;
+    }
+
+    .hero-copy {
+        min-width: 0;
+    }
+
+    .hero-brandline h1 {
+        font-size: clamp(4.7rem, 9vw, 6.6rem);
+    }
+
+    .hero-spark {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .benefit-grid {
+        gap: .5rem;
+    }
+
+    .benefit-card {
+        min-height: 95px;
+        font-size: .67rem;
+    }
+
+    .hero-visual {
+        transform: scale(.95);
+        transform-origin: center right;
+    }
+
+    .steps-layout,
+    .faq-layout {
+        gap: 3rem;
+    }
+
+    .templates-layout {
+        gap: 3.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-space: 5rem;
+    }
+
+    .container {
+        width: min(calc(100% - 2.5rem), var(--page-width));
+    }
+
+    .site-nav {
+        min-height: 66px;
+    }
+
+    .nav-toggle {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid var(--resumate-border);
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        width: 16px;
+        height: 1.5px;
+        border-radius: 3px;
+        background: var(--resumate-text);
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .nav-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    .nav-panel {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 1.3rem;
+        padding: 1.1rem 1.25rem 1.35rem;
+        border-bottom: 1px solid var(--resumate-border);
+        background: #06191b;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .2);
+    }
+
+    .nav-panel.is-open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links,
+    .nav-actions {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links a,
+    .nav-actions a {
+        padding: .75rem .25rem;
+    }
+
+    .nav-links a {
+        border-bottom: 1px solid rgba(142, 202, 190, .09);
+        font-size: .76rem;
+    }
+
+    .nav-actions {
+        gap: .2rem;
+    }
+
+    .nav-actions .button {
+        justify-content: center;
+        margin-top: .35rem;
+        padding-block: .75rem;
+    }
+
+    .nav-actions .nav-login {
+        text-align: center;
+    }
+
+    .hero-section {
+        min-height: 0;
+        padding-top: 4.5rem;
+    }
+
+    .hero-glow {
+        display: none;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2.8rem;
+    }
+
+    .hero-brandline {
+        gap: .75rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-brandline h1 {
+        font-size: clamp(3.5rem, 11vw, 4.3rem);
+    }
+
+    .hero-spark {
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: .8rem;
+        font-size: 1.15rem;
+    }
+
+    .hero-lede {
+        max-width: 35rem;
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+    }
+
+    .hero-note {
+        flex-basis: 100%;
+        margin-left: .2rem;
+    }
+
+    .benefit-grid {
+        max-width: none;
+        gap: .55rem;
+    }
+
+    .benefit-card {
+        min-height: 88px;
+        border-radius: .8rem;
+        font-size: .62rem;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 520px;
+        min-height: clamp(385px, 90vw, 475px);
+        justify-self: center;
+        padding-right: .25rem;
+        transform: none;
+    }
+
+    .resume-paper {
+        width: 88%;
+        min-height: 390px;
+        padding: 1.25rem;
+    }
+
+    .resume-columns {
+        gap: .8rem;
+    }
+
+    .ai-card {
+        right: 0;
+        bottom: 1.8rem;
+        width: min(70%, 270px);
+    }
+
+    .visual-caption {
+        right: -.1rem;
+        bottom: -.6rem;
+        max-width: 240px;
+        font-size: 1.55rem;
+    }
+
+    .hero-bottom {
+        margin-top: 1.1rem;
+        font-size: .48rem;
+        letter-spacing: .12em;
+    }
+
+    .intro-layout {
+        grid-template-columns: 1fr auto;
+        gap: 1.3rem;
+    }
+
+    .intro-layout > .eyebrow {
+        grid-column: 1 / -1;
+        margin-bottom: -.4rem;
+    }
+
+    .intro-stat {
+        align-self: end;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: clamp(2.5rem, 9vw, 3.7rem);
+    }
+
+    .intro-layout .section-copy {
+        font-size: .88rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+    }
+
+    .feature-card,
+    .feature-card:first-child {
+        min-height: 255px;
+        padding: 1.35rem 1.2rem 1.5rem;
+        border: 0;
+        border-bottom: 1px solid var(--resumate-border);
+    }
+
+    .feature-icon {
+        margin-top: 1.8rem;
+    }
+
+    .feature-card p {
+        max-width: 28rem;
+    }
+
+    .steps-layout,
+    .ats-card,
+    .templates-layout,
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 2.6rem;
+    }
+
+    .steps-intro .section-copy {
+        max-width: 32rem;
+    }
+
+    .ats-card {
+        padding: 2rem 1.35rem;
+    }
+
+    .ats-copy .section-title {
+        font-size: clamp(2.3rem, 8vw, 3.2rem);
+    }
+
+    .template-preview {
+        min-height: 360px;
+    }
+
+    .template-sheet {
+        width: 225px;
+        height: 310px;
+    }
+
+    .template-chip {
+        right: 0;
+        bottom: 1.4rem;
+    }
+
+    .pricing-banner {
+        min-height: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2.4rem 1.5rem;
+    }
+
+    .pricing-copy {
+        max-width: 30rem;
+    }
+
+    .pricing-orbit {
+        top: auto;
+        right: -1rem;
+        bottom: -3.5rem;
+        font-size: 12rem;
+    }
+
+    .faq-layout {
+        gap: 2rem;
+    }
+
+    .faq-intro .section-title br {
+        display: none;
+    }
+
+    .final-cta .section-title {
+        font-size: clamp(2.8rem, 10vw, 4.4rem);
+    }
+
+    .cta-decoration-one {
+        top: 4%;
+        left: -2rem;
+        font-size: 6rem;
+    }
+
+    .cta-decoration-two {
+        right: -1rem;
+        bottom: 2%;
+        font-size: 5rem;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.3rem 1.5rem;
+        padding-block: 3rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+        padding-block: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        width: calc(100% - 2rem);
+    }
+
+    .hero-brandline h1 {
+        font-size: clamp(3rem, 14vw, 3.5rem);
+    }
+
+    .hero-spark {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+
+    .template-sheet {
+        width: 200px;
+        height: 285px;
+    }
+
+    .template-sheet-back {
+        transform: translate(25px, -2px) rotate(8deg);
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-card {
+        min-height: 80px;
+    }
+
+    .resume-paper {
+        width: 94%;
+        padding: 1rem;
+    }
+
+    .resume-columns {
+        gap: .55rem;
+    }
+
+    .resume-block p,
+    .resume-block ul,
+    .resume-block strong {
+        font-size: .55rem;
+    }
+
+    .resume-block h3 {
+        font-size: .48rem;
+    }
+}

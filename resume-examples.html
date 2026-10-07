@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06191b">
+    <meta name="description" content="Explore fictional resume examples by job role, experience level, and industry. Learn what to include, how to structure your story, and what makes each example work.">
+    <title>Resume Examples — Resu Mate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/resume-examples.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/resume-examples.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <nav class="navbar site-nav container" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Resu Mate home">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span>Resu<span class="brand-mate"> Mate</span></span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-panel" id="primary-navigation">
+                <div class="nav-links">
+                    <a href="features.html">Features</a>
+                    <a href="how-it-works.html">How it works</a>
+                    <a href="templates.html">Templates</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+                <div class="nav-actions">
+                    <a class="nav-login" href="https://app.resumate.com/login">Log in</a>
+                    <a class="button button-small" href="https://app.resumate.com/signup">Create account <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="examples-hero">
+            <div class="container examples-hero-layout">
+                <div class="examples-hero-copy">
+                    <p class="eyebrow">A CLEARER WAY TO SEE WHAT FITS</p>
+                    <h1>Resume examples<br>that show you<br><em>what good looks like.</em></h1>
+                    <p>Explore fictional, role-focused examples to see what a resume can include, how its story can be structured, and why the choices work.</p>
+                    <form class="examples-search" id="examples-search-form" role="search">
+                        <label class="visually-hidden" for="examples-search-input">Search resume examples</label>
+                        <span aria-hidden="true">⌕</span>
+                        <input id="examples-search-input" name="q" type="search" placeholder="Search resume examples..." autocomplete="off">
+                        <button type="submit">Search</button>
+                    </form>
+                    <p class="examples-search-hint">Try “software engineer”, “graduate”, or “healthcare”.</p>
+                </div>
+                <div class="examples-hero-art" aria-hidden="true">
+                    <div class="examples-orbit examples-orbit-one"></div>
+                    <div class="examples-orbit examples-orbit-two"></div>
+                    <div class="examples-hero-paper examples-hero-paper-back">
+                        <span>EXPERIENCE</span><strong>What you<br>have done.</strong><i></i><i></i>
+                    </div>
+                    <div class="examples-hero-paper examples-hero-paper-front">
+                        <span>YOUR RESUME</span><strong>Why it<br>matters.</strong><b>A STORY, CLEARLY TOLD</b>
+                    </div>
+                    <span class="examples-art-note">Good examples<br>teach the why.</span>
+                </div>
+            </div>
+            <div class="container examples-hero-foot"><span>FICTIONAL SAMPLE CONTENT</span><i></i><span>REAL-WORLD STRUCTURE</span><i></i><span>YOUR STORY, YOURS</span></div>
+        </section>
+
+        <section class="examples-intro section-space">
+            <div class="container examples-intro-layout">
+                <div><p class="eyebrow">MORE THAN A PRETTY PAGE</p><h2 class="section-title">Learn from the<br><em>content, too.</em></h2></div>
+                <div>
+                    <p>Resume examples answer “What should my resume say, and how should I structure it?” Templates answer “What design can I use?” Here, each sample gives you a glimpse of the content plus notes on why the approach can work.</p>
+                    <a class="examples-inline-link" href="templates.html">Looking for a design instead? Explore resume templates <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-library section-space" id="browse-examples">
+            <div class="container">
+                <div class="examples-library-heading">
+                    <div><p class="eyebrow">FIND YOUR STARTING POINT</p><h2 class="section-title">Browse examples<br><em>that feel relevant.</em></h2></div>
+                    <p>Filter by experience or industry, or search for a role. Every person, company, and achievement shown is fictional and created for illustration.</p>
+                </div>
+
+                <div class="examples-filter-panel">
+                    <div class="examples-filter-group" role="group" aria-label="Filter by experience level">
+                        <span class="examples-filter-label">EXPERIENCE</span>
+                        <div class="examples-filter-options" id="experience-filters">
+                            <button type="button" class="examples-filter is-selected" data-experience-filter="all" aria-pressed="true">All levels</button>
+                            <button type="button" class="examples-filter" data-experience-filter="entry" aria-pressed="false">Entry level</button>
+                            <button type="button" class="examples-filter" data-experience-filter="no-experience" aria-pressed="false">No experience</button>
+                            <button type="button" class="examples-filter" data-experience-filter="graduate" aria-pressed="false">Graduate</button>
+                            <button type="button" class="examples-filter" data-experience-filter="mid" aria-pressed="false">Mid-level</button>
+                            <button type="button" class="examples-filter" data-experience-filter="senior" aria-pressed="false">Senior</button>
+                            <button type="button" class="examples-filter" data-experience-filter="manager" aria-pressed="false">Manager</button>
+                            <button type="button" class="examples-filter" data-experience-filter="executive" aria-pressed="false">Executive</button>
+                        </div>
+                    </div>
+                    <div class="examples-filter-group" role="group" aria-label="Filter by industry">
+                        <span class="examples-filter-label">INDUSTRY</span>
+                        <div class="examples-filter-options" id="industry-filters">
+                            <button type="button" class="examples-filter is-selected" data-industry-filter="all" aria-pressed="true">All industries</button>
+                            <button type="button" class="examples-filter" data-industry-filter="technology" aria-pressed="false">Technology</button>
+                            <button type="button" class="examples-filter" data-industry-filter="finance" aria-pressed="false">Finance</button>
+                            <button type="button" class="examples-filter" data-industry-filter="business" aria-pressed="false">Business</button>
+                            <button type="button" class="examples-filter" data-industry-filter="marketing" aria-pressed="false">Marketing &amp; sales</button>
+                            <button type="button" class="examples-filter" data-industry-filter="healthcare" aria-pressed="false">Healthcare</button>
+                            <button type="button" class="examples-filter" data-industry-filter="education" aria-pressed="false">Education</button>
+                            <button type="button" class="examples-filter" data-industry-filter="administration" aria-pressed="false">Administration</button>
+                            <button type="button" class="examples-filter" data-industry-filter="other" aria-pressed="false">Other careers</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="examples-results-status" id="examples-results-status" aria-live="polite">Showing all 12 examples</p>
+
+                <div class="resume-example-grid" id="resume-example-grid">
+                    <article class="resume-example-card" data-experience="mid" data-industry="technology" data-example-search="software engineer technology mid level developer javascript python react projects">
+                        <div class="example-preview example-preview-tech">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Nia Okafor</span>
+                                <span class="example-paper-role">SOFTWARE ENGINEER</span>
+                                <span class="example-paper-contact">nia.okafor@example.test · Lagos, NG</span>
+                                <b>SUMMARY</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Software Engineer</strong><small>Northstar Labs · 2022–Present</small><i></i><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">JavaScript · React · APIs</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>TECHNOLOGY</span><span>MID-LEVEL</span></div>
+                            <h3>Software Engineer</h3>
+                            <p>A structure for showing technical strengths, relevant projects, and the impact behind engineering work.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Leads with a focused summary, then connects technical skills to specific project and experience examples.</p><p><strong>ATS note:</strong> Uses standard headings and readable text rather than placing key skills inside graphics.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="senior" data-industry="technology" data-example-search="senior software engineer technology senior technical lead architecture mentoring platform">
+                        <div class="example-preview example-preview-tech">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Chika Ibe</span>
+                                <span class="example-paper-role">SENIOR SOFTWARE ENGINEER</span>
+                                <span class="example-paper-contact">chika.ibe@example.test · Remote</span>
+                                <b>SUMMARY</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Technical Lead</strong><small>Evergreen Systems · 2019–Present</small><i></i>
+                                <b>LEADERSHIP</b><span class="example-paper-skills">Architecture · Mentoring</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>TECHNOLOGY</span><span>SENIOR</span></div>
+                            <h3>Senior Software Engineer</h3>
+                            <p>Balances technical depth with architectural decisions, collaboration, and the influence of senior-level work.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Shows scope and leadership alongside hands-on engineering instead of relying on a longer list of technologies.</p><p><strong>ATS note:</strong> Keeps technical terms and leadership examples in standard, readable sections.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="entry" data-industry="technology" data-example-search="frontend developer entry level technology web developer html css javascript portfolio">
+                        <div class="example-preview example-preview-frontend">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Tomi Adeyemi</span>
+                                <span class="example-paper-role">FRONTEND DEVELOPER</span>
+                                <span class="example-paper-contact">tomi.adeyemi@example.test · Remote</span>
+                                <b>PROFILE</b><i></i><i></i>
+                                <b>PROJECTS</b><strong>Community events site</strong><small>Responsive web project</small><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">HTML · CSS · JavaScript</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>TECHNOLOGY</span><span>ENTRY LEVEL</span></div>
+                            <h3>Frontend Developer</h3>
+                            <p>Shows how projects and practical skills can help tell your story when your professional history is still growing.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Gives relevant projects clear space and explains the work instead of relying only on a list of tools.</p><p><strong>ATS note:</strong> Places technology names in a plain-text skills section and uses a familiar content order.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="entry no-experience" data-industry="education other" data-example-search="first resume no experience student graduate entry level education projects volunteer skills">
+                        <div class="example-preview example-preview-education">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Maya Adebayo</span>
+                                <span class="example-paper-role">EARLY-CAREER APPLICANT</span>
+                                <span class="example-paper-contact">maya.adebayo@example.test · Lagos, NG</span>
+                                <b>PROFILE</b><i></i><i></i>
+                                <b>SELECTED PROJECT</b><strong>Campus reading circle</strong><small>Volunteer coordination · 2025</small><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">Research · Teamwork · Writing</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>FIRST RESUME</span><span>NO EXPERIENCE</span></div>
+                            <h3>Resume With No Experience</h3>
+                            <p>Offers a starting structure built around education, projects, volunteering, and transferable skills.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Leads with relevant strengths and uses a project or volunteer contribution to demonstrate them with context.</p><p><strong>ATS note:</strong> A first resume can still use familiar headings. Only include experience, tools, and achievements that are true for you.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="graduate" data-industry="technology business" data-example-search="data analyst graduate entry technology business analytics excel sql dashboard research">
+                        <div class="example-preview example-preview-data">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Seyi Bello</span>
+                                <span class="example-paper-role">JUNIOR DATA ANALYST</span>
+                                <span class="example-paper-contact">seyi.bello@example.test · Abuja, NG</span>
+                                <b>PROFILE</b><i></i><i></i>
+                                <b>SELECTED PROJECT</b><strong>Retail trends study</strong><small>University capstone · 2025</small><i></i>
+                                <b>TOOLS</b><span class="example-paper-skills">SQL · Excel · Power BI</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>TECH + BUSINESS</span><span>GRADUATE</span></div>
+                            <h3>Graduate Data Analyst</h3>
+                            <p>Balances education, analytical tools, and a substantial academic project for an early-career application.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Makes a relevant capstone easy to understand by pairing the project with its methods and purpose.</p><p><strong>ATS note:</strong> Lists tools in text and uses clear headings for education, projects, and skills.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="mid" data-industry="finance" data-example-search="accountant finance mid level accounts reconciliation reporting audit excel">
+                        <div class="example-preview example-preview-finance">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Amara Eze</span>
+                                <span class="example-paper-role">ACCOUNTANT</span>
+                                <span class="example-paper-contact">amara.eze@example.test · Enugu, NG</span>
+                                <b>SUMMARY</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Accounts Officer</strong><small>Maple Ledger Group · 2021–2025</small><i></i>
+                                <b>CORE SKILLS</b><span class="example-paper-skills">Reconciliation · Reporting</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>FINANCE</span><span>MID-LEVEL</span></div>
+                            <h3>Accountant</h3>
+                            <p>Highlights financial processes, tools, and dependable detail without turning the resume into a task list.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Groups related accounting strengths and uses experience bullets to show context and contribution.</p><p><strong>ATS note:</strong> Uses conventional work-history and education headings with role-relevant terminology.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="manager" data-industry="business" data-example-search="project manager operations business manager mid senior delivery planning stakeholders">
+                        <div class="example-preview example-preview-project">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Kelechi Nwosu</span>
+                                <span class="example-paper-role">PROJECT MANAGER</span>
+                                <span class="example-paper-contact">kelechi.nwosu@example.test · Remote</span>
+                                <b>SUMMARY</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Project Lead</strong><small>Harbour Works · 2020–Present</small><i></i>
+                                <b>STRENGTHS</b><span class="example-paper-skills">Planning · Delivery · Teams</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>BUSINESS</span><span>MANAGER</span></div>
+                            <h3>Project Manager</h3>
+                            <p>Connects planning and stakeholder work to project outcomes, scope, and the teams involved.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Gives ownership and delivery context instead of presenting project coordination as a generic duty.</p><p><strong>ATS note:</strong> Uses clear job titles and readable project-management terms in the experience section.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="executive" data-industry="business" data-example-search="executive operations director business executive leadership strategy organization">
+                        <div class="example-preview example-preview-project">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Amina Danjuma</span>
+                                <span class="example-paper-role">OPERATIONS DIRECTOR</span>
+                                <span class="example-paper-contact">amina.danjuma@example.test · Abuja, NG</span>
+                                <b>LEADERSHIP PROFILE</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Operations Director</strong><small>Summit Bridge Group · 2018–Present</small><i></i>
+                                <b>FOCUS</b><span class="example-paper-skills">Strategy · Governance · Growth</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>BUSINESS</span><span>EXECUTIVE</span></div>
+                            <h3>Operations Director</h3>
+                            <p>Emphasizes strategic scope, leadership priorities, and organization-wide outcomes at executive level.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Prioritizes direction, scale, and leadership contributions over a dense list of day-to-day tasks.</p><p><strong>ATS note:</strong> Keeps executive responsibilities and relevant industry terminology in clear text and familiar sections.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="entry" data-industry="marketing" data-example-search="marketing specialist digital marketing sales entry level campaigns content social media">
+                        <div class="example-preview example-preview-marketing">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Zara Yusuf</span>
+                                <span class="example-paper-role">MARKETING SPECIALIST</span>
+                                <span class="example-paper-contact">zara.yusuf@example.test · Lagos, NG</span>
+                                <b>PROFILE</b><i></i><i></i>
+                                <b>CAMPAIGNS</b><strong>Launch week series</strong><small>Content and channel planning</small><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">Content · Email · Analytics</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>MARKETING &amp; SALES</span><span>ENTRY LEVEL</span></div>
+                            <h3>Marketing Specialist</h3>
+                            <p>Frames campaign contributions, audience understanding, and creative execution for a growing career.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Describes the audience, goal, and contribution behind marketing work instead of listing channels alone.</p><p><strong>ATS note:</strong> Keeps campaign skills and platform terms in readable text.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="mid" data-industry="healthcare" data-example-search="nurse healthcare registered nurse patient care clinical documentation graduate">
+                        <div class="example-preview example-preview-health">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Mina Joseph</span>
+                                <span class="example-paper-role">REGISTERED NURSE</span>
+                                <span class="example-paper-contact">mina.joseph@example.test · Port Harcourt</span>
+                                <b>PROFILE</b><i></i><i></i>
+                                <b>CLINICAL EXPERIENCE</b><strong>Registered Nurse</strong><small>Willow Care Centre · 2022–Present</small><i></i>
+                                <b>FOCUS</b><span class="example-paper-skills">Patient care · Documentation</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>HEALTHCARE</span><span>MID-LEVEL</span></div>
+                            <h3>Registered Nurse</h3>
+                            <p>Organizes clinical experience, relevant care strengths, and credentials in a clear professional structure.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Prioritizes relevant clinical responsibilities and the care context while keeping details concise.</p><p><strong>ATS note:</strong> Uses recognizable role and credential headings. Only include qualifications you actually hold.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="graduate" data-industry="education" data-example-search="teacher education graduate teaching assistant educator classroom learning">
+                        <div class="example-preview example-preview-education">
+                            <div class="example-paper">
+                                <span class="example-paper-name">David Mensah</span>
+                                <span class="example-paper-role">GRADUATE TEACHER</span>
+                                <span class="example-paper-contact">david.mensah@example.test · Accra, GH</span>
+                                <b>EDUCATION</b><i></i><i></i>
+                                <b>TEACHING PRACTICE</b><strong>Classroom placement</strong><small>Learning support · 2025</small><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">Lesson planning · Facilitation</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>EDUCATION</span><span>GRADUATE</span></div>
+                            <h3>Graduate Teacher</h3>
+                            <p>Shows how teaching practice, relevant study, and learner-focused skills can form an early-career story.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Puts practice and preparation alongside education, giving context beyond a qualification title.</p><p><strong>ATS note:</strong> Uses straightforward headings and role-related language a school can scan.</p><a href="templates.html">Explore resume templates <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="resume-example-card" data-experience="entry" data-industry="administration business" data-example-search="administrative assistant entry level business operations organization office">
+                        <div class="example-preview example-preview-admin">
+                            <div class="example-paper">
+                                <span class="example-paper-name">Lara Okeke</span>
+                                <span class="example-paper-role">ADMINISTRATIVE ASSISTANT</span>
+                                <span class="example-paper-contact">lara.okeke@example.test · Ibadan, NG</span>
+                                <b>SUMMARY</b><i></i><i></i>
+                                <b>EXPERIENCE</b><strong>Office Assistant</strong><small>Juniper House · 2023–Present</small><i></i>
+                                <b>SKILLS</b><span class="example-paper-skills">Scheduling · Records · Support</span>
+                            </div>
+                            <span class="example-fictional-stamp">FICTIONAL SAMPLE</span>
+                        </div>
+                        <div class="example-card-copy">
+                            <div class="example-card-meta"><span>ADMINISTRATION</span><span>ENTRY LEVEL</span></div>
+                            <h3>Administrative Assistant</h3>
+                            <p>Brings organization, communication, and day-to-day coordination into focus without overloading the page.</p>
+                            <details class="example-insight">
+                                <summary>What to notice <span aria-hidden="true">+</span></summary>
+                                <div><p><strong>Why it works:</strong> Connects responsibilities—such as scheduling or records—with the support they provide to a team.</p><p><strong>ATS note:</strong> Uses conventional sections and plain-language administrative skills.</p><a href="blog.html">Explore upcoming career guides <span aria-hidden="true">→</span></a></div>
+                            </details>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="examples-no-results" id="examples-no-results" hidden>
+                    <strong>No examples match that combination yet.</strong>
+                    <p>Try a broader search or clear one of the filters.</p>
+                    <button type="button" id="examples-reset">Show all examples</button>
+                </div>
+                <p class="examples-fictional-note">All sample names, contact details, employers, and resume content on this page are fictional and created for illustration. Adapt the structure—not another person’s story—to your own experience.</p>
+            </div>
+        </section>
+
+        <section class="examples-journey section-space">
+            <div class="container examples-journey-layout">
+                <div>
+                    <p class="eyebrow">FROM EXAMPLE TO YOUR OWN</p>
+                    <h2 class="section-title">Learn from the story.<br><em>Then make it yours.</em></h2>
+                    <p>Use an example to think about structure, relevant detail, and clear writing. Then choose a design and build a resume around your own experience.</p>
+                </div>
+                <div class="examples-journey-links">
+                    <a href="blog.html"><span>01</span><div><strong>Go deeper with a guide</strong><small>Browse practical career topics in Career Notes.</small></div><i aria-hidden="true">↗</i></a>
+                    <a href="templates.html"><span>02</span><div><strong>Choose a resume template</strong><small>Explore layouts for different styles and roles.</small></div><i aria-hidden="true">↗</i></a>
+                    <a href="how-it-works.html"><span>03</span><div><strong>See how Resu Mate works</strong><small>Follow the process from first draft to tailored resume.</small></div><i aria-hidden="true">↗</i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-cta-section">
+            <div class="container examples-cta">
+                <div>
+                    <p class="eyebrow">READY TO CREATE YOURS?</p>
+                    <h2 class="section-title">Your experience.<br><em>Your resume.</em></h2>
+                    <p>Bring your real story and shape it into a clear resume with Resu Mate.</p>
+                </div>
+                <a class="button button-large" href="https://app.resumate.com/signup">Build your resume <span aria-hidden="true">↗</span></a>
+                <span class="examples-cta-mark" aria-hidden="true">✳</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>Resu<span class="brand-mate"> Mate</span></span></a>
+                <p>Your experience, presented beautifully.</p>
+            </div>
+            <div class="footer-column"><h2>Product</h2><a href="features.html">Features</a><a href="how-it-works.html">How it works</a><a href="templates.html">Templates</a><a href="pricing.html">Pricing</a></div>
+            <div class="footer-column"><h2>Resources</h2><a href="resources.html">Career resources</a><a href="resume-examples.html" aria-current="page">Resume examples</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div>
+            <div class="footer-column"><h2>Company</h2><a href="comapny/about.html">About Resu Mate</a><a href="comapny/contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© <span data-current-year>2026</span> Resu Mate. Built around your story.</span>
+            <a href="cookies.html">Cookie preferences</a>
+            <span>Thoughtful tools for what’s next <span class="footer-star" aria-hidden="true">✦</span></span>
+        </div>
+    </footer>
+</body>
+</html>
