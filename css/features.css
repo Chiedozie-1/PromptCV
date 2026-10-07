@@ -22,7 +22,7 @@
 
 .features-hero-copy h1 {
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(3.7rem, 7.2vw, 6.2rem);
     font-weight: 500;
     letter-spacing: -.07em;
@@ -30,7 +30,7 @@
 }
 
 .features-hero-copy h1 em {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 500;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .hero-secondary-link span {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .features-hero-art {
@@ -115,7 +115,7 @@
     border-radius: 50%;
     background: #d9ebe3;
     color: #367666;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .75rem;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .mini-resume-header strong {
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .93rem;
 }
 
@@ -233,7 +233,7 @@
     place-items: center;
     border-radius: .55rem;
     background: rgba(76, 226, 194, .11);
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .writing-note > span:last-child {
@@ -244,7 +244,7 @@
 
 .writing-note strong {
     color: #eaf3ed;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .74rem;
 }
 
@@ -258,7 +258,7 @@
     bottom: .8rem;
     left: .2rem;
     color: #8fc9b7;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.03rem;
     font-style: italic;
 }
@@ -277,7 +277,7 @@
 }
 
 .features-hero-footer span:nth-child(even) {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .75rem;
 }
 
@@ -345,13 +345,13 @@
     align-items: center;
     gap: .65rem;
     color: #27463f;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
 }
 
 .overview-count span {
     color: #83938a;
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
     font-size: .5rem;
     font-weight: 700;
     letter-spacing: .15em;
@@ -367,7 +367,7 @@
 .overview-card h3 {
     margin: .9rem 0 0;
     color: #193633;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.16rem;
     font-weight: 600;
     letter-spacing: -.025em;
@@ -445,7 +445,7 @@
     place-items: center;
     border: 1px solid rgba(76, 226, 194, .38);
     border-radius: 50%;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .7rem;
     line-height: 1;
 }
@@ -498,7 +498,7 @@
 .example-original {
     margin: .55rem 0 0;
     color: #7f8b84;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.05rem;
     font-style: italic;
     line-height: 1.6;
@@ -529,7 +529,7 @@
     border-left: 2px solid #48ae91;
     background: #e7eee7;
     color: #29463f;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.08rem;
     line-height: 1.65;
 }
@@ -655,7 +655,7 @@
 .match-document strong {
     display: block;
     color: #29453d;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .75rem;
 }
 
@@ -721,7 +721,7 @@
 
 .match-insight strong {
     color: #355d4e;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .68rem;
 }
 
@@ -737,7 +737,7 @@
     margin: 0;
     transform: rotate(-5deg);
     color: #5c8876;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.12rem;
     font-style: italic;
 }
@@ -827,7 +827,7 @@
 
 .ats-feature-number {
     color: #9a9d8f;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .8rem;
 }
 
@@ -960,7 +960,7 @@
 .template-swatch-front > strong {
     margin-top: .65rem;
     color: #25443b;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: -.06em;
@@ -988,7 +988,7 @@
     right: -.1rem;
     bottom: 1rem;
     color: #536f62;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.15rem;
     line-height: 1.4;
     text-align: right;

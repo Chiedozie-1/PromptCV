@@ -22,7 +22,7 @@
 
 .blog-hero-copy h1 {
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(3.7rem, 7vw, 6.2rem);
     font-weight: 500;
     letter-spacing: -.07em;
@@ -30,7 +30,7 @@
 }
 
 .blog-hero-copy h1 em {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@
     border: 0;
     background: transparent;
     color: #284439;
-    font: 400 .74rem var(--resumate-sans);
+    font: 400 .74rem var(--PromptCV-sans);
     outline: 0;
 }
 
@@ -160,7 +160,7 @@
 
 .blog-paper strong {
     margin-top: 1.7rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: -.045em;
@@ -200,7 +200,7 @@
     bottom: .2rem;
     transform: rotate(5deg);
     color: #83c7b1;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.1rem;
     font-style: italic;
     line-height: 1.3;
@@ -320,7 +320,7 @@
 
 .featured-paper strong {
     margin-top: 1.45rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -.055em;
@@ -359,7 +359,7 @@
     bottom: 14%;
     transform: rotate(7deg);
     color: #347b62;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
     font-style: italic;
     line-height: 1.2;
@@ -404,7 +404,7 @@
     max-width: 34rem;
     margin: 1.2rem 0 .8rem;
     color: #24453a;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(2rem, 3.8vw, 3rem);
     font-weight: 500;
     letter-spacing: -.05em;
@@ -557,7 +557,7 @@
     position: relative;
     z-index: 1;
     margin-top: .75rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.65rem;
     font-weight: 500;
     letter-spacing: -.045em;
@@ -631,7 +631,7 @@
 .blog-card-content h3 {
     margin: .8rem 0 .5rem;
     color: #24453a;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: -.03em;
@@ -681,7 +681,7 @@
 
 .blog-no-results strong {
     color: #315345;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.4rem;
     font-weight: 500;
 }
@@ -741,7 +741,7 @@
     max-width: 18rem;
     margin-top: 1.5rem;
     color: #29483c;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.35rem;
     font-weight: 500;
     line-height: 1.25;

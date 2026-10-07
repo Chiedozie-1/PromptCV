@@ -1,15 +1,15 @@
 :root {
     color-scheme: dark;
-    --resumate-bg: #06191b;
-    --resumate-bg-secondary: #092326;
-    --resumate-bg-soft: #0d2b2d;
-    --resumate-text: #f2f4ef;
-    --resumate-muted: #9bada9;
-    --resumate-accent: #4ce2c2;
-    --resumate-accent-deep: #24bfa5;
-    --resumate-border: rgba(142, 202, 190, 0.17);
-    --resumate-serif: "Playfair Display", Georgia, serif;
-    --resumate-sans: "DM Sans", Arial, sans-serif;
+    --PromptCV-bg: #06191b;
+    --PromptCV-bg-secondary: #092326;
+    --PromptCV-bg-soft: #0d2b2d;
+    --PromptCV-text: #f2f4ef;
+    --PromptCV-muted: #9bada9;
+    --PromptCV-accent: #4ce2c2;
+    --PromptCV-accent-deep: #24bfa5;
+    --PromptCV-border: rgba(142, 202, 190, 0.17);
+    --PromptCV-serif: "Playfair Display", Georgia, serif;
+    --PromptCV-sans: "DM Sans", Arial, sans-serif;
     --page-width: 1160px;
     --section-space: clamp(5rem, 10vw, 9rem);
 }
@@ -25,9 +25,9 @@ html {
 
 body {
     margin: 0;
-    background: var(--resumate-bg);
-    color: var(--resumate-text);
-    font-family: var(--resumate-sans);
+    background: var(--PromptCV-bg);
+    color: var(--PromptCV-text);
+    font-family: var(--PromptCV-sans);
     font-size: 16px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ body {
 body,
 button,
 a {
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
 }
 
 a {
@@ -47,7 +47,7 @@ a {
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-    outline: 2px solid var(--resumate-accent);
+    outline: 2px solid var(--PromptCV-accent);
     outline-offset: 5px;
 }
 
@@ -69,7 +69,7 @@ button {
     padding: .7rem 1rem;
     transform: translateY(-180%);
     border-radius: 999px;
-    background: var(--resumate-accent);
+    background: var(--PromptCV-accent);
     color: #06201f;
     font-weight: 700;
 }
@@ -97,7 +97,7 @@ button {
     align-items: center;
     gap: .55rem;
     color: #e9f3ef;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.12rem;
     font-weight: 700;
     letter-spacing: -.04em;
@@ -109,15 +109,15 @@ button {
     width: 1.65rem;
     height: 1.65rem;
     place-items: center;
-    border: 1px solid var(--resumate-accent);
+    border: 1px solid var(--PromptCV-accent);
     border-radius: .55rem;
-    color: var(--resumate-accent);
-    font-family: var(--resumate-sans);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-sans);
     font-size: .9rem;
 }
 
 .brand-mate {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-style: italic;
 }
 
@@ -127,7 +127,7 @@ button {
 
 .eyebrow {
     margin: 0 0 1.15rem;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .69rem;
     font-weight: 700;
     letter-spacing: .19em;
@@ -136,8 +136,8 @@ button {
 
 .section-title {
     margin: 0;
-    color: var(--resumate-text);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-text);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(2.45rem, 5vw, 4.15rem);
     font-weight: 500;
     letter-spacing: -.055em;
@@ -145,14 +145,14 @@ button {
 }
 
 .section-title em {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 500;
 }
 
 .section-copy {
     max-width: 36rem;
     margin: 1.45rem 0 0;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .98rem;
     line-height: 1.8;
 }
@@ -162,7 +162,7 @@ button {
     align-items: center;
     gap: .75rem;
     margin-top: 1.7rem;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .86rem;
     font-weight: 700;
 }
@@ -221,7 +221,7 @@ button {
 
 .hero-brandline h1 {
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(5rem, 9vw, 8.2rem);
     font-weight: 600;
     letter-spacing: -.075em;
@@ -229,7 +229,7 @@ button {
 }
 
 .hero-brandline h1 span {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-style: italic;
 }
 
@@ -239,9 +239,9 @@ button {
     height: 3.55rem;
     flex: 0 0 auto;
     place-items: center;
-    border: 1.5px solid var(--resumate-accent);
+    border: 1.5px solid var(--PromptCV-accent);
     border-radius: 1rem;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: 1.4rem;
     box-shadow: 0 0 0 6px rgba(72, 229, 194, .06);
 }
@@ -253,7 +253,7 @@ button {
 .hero-lede {
     max-width: 34rem;
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(1.7rem, 3vw, 2.38rem);
     font-weight: 600;
     letter-spacing: -.045em;
@@ -269,7 +269,7 @@ button {
 }
 
 .hero-note {
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .75rem;
 }
 
@@ -290,10 +290,10 @@ button {
     align-items: center;
     justify-content: center;
     gap: .5rem;
-    border: 1px solid var(--resumate-border);
+    border: 1px solid var(--PromptCV-border);
     border-radius: 1rem;
     background: rgba(6, 28, 31, .48);
-    color: var(--resumate-text);
+    color: var(--PromptCV-text);
     font-size: .74rem;
     font-weight: 600;
     line-height: 1.4;
@@ -308,7 +308,7 @@ button {
 }
 
 .benefit-icon {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: 1.4rem;
     line-height: 1;
 }
@@ -359,7 +359,7 @@ button {
 .resume-topline h2 {
     margin: 0;
     color: #192a2f;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.33rem;
     font-weight: 700;
 }
@@ -398,7 +398,7 @@ button {
 .resume-block h3 {
     margin: 0 0 .4rem;
     color: #395258;
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
     font-size: .52rem;
     font-weight: 700;
     letter-spacing: .16em;
@@ -457,19 +457,19 @@ button {
     display: flex;
     align-items: center;
     gap: .5rem;
-    color: var(--resumate-text);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-text);
+    font-family: var(--PromptCV-serif);
     font-size: .94rem;
 }
 
 .ai-spark {
-    color: var(--resumate-accent);
-    font-family: var(--resumate-sans);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-sans);
 }
 
 .ai-card > p {
     margin: .25rem 0 .8rem 1.3rem;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .69rem;
 }
 
@@ -482,7 +482,7 @@ button {
 }
 
 .ai-suggestion span {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 700;
 }
 
@@ -494,8 +494,8 @@ button {
     max-width: 290px;
     margin: 0;
     transform: rotate(8deg);
-    color: var(--resumate-accent);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-serif);
     font-size: 1.9rem;
     font-style: italic;
     line-height: 1.15;
@@ -543,22 +543,22 @@ button {
 }
 
 .stat-number {
-    color: var(--resumate-accent);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-serif);
     font-size: 4rem;
     line-height: 1;
 }
 
 .stat-label {
     margin-top: .6rem;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .76rem;
     line-height: 1.5;
     text-align: right;
 }
 
 .features-section {
-    background: var(--resumate-bg);
+    background: var(--PromptCV-bg);
 }
 
 .section-heading {
@@ -569,19 +569,19 @@ button {
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--resumate-border);
-    border-bottom: 1px solid var(--resumate-border);
+    border-top: 1px solid var(--PromptCV-border);
+    border-bottom: 1px solid var(--PromptCV-border);
 }
 
 .feature-card {
     position: relative;
     min-height: 300px;
     padding: 1.7rem 1.65rem 1.55rem;
-    border-right: 1px solid var(--resumate-border);
+    border-right: 1px solid var(--PromptCV-border);
 }
 
 .feature-card:first-child {
-    border-left: 1px solid var(--resumate-border);
+    border-left: 1px solid var(--PromptCV-border);
 }
 
 .feature-card-featured {
@@ -589,7 +589,7 @@ button {
 }
 
 .feature-number {
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .62rem;
     font-weight: 700;
     letter-spacing: .15em;
@@ -598,14 +598,14 @@ button {
 .feature-icon {
     display: block;
     margin: 2.5rem 0 1rem;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: 1.75rem;
     line-height: 1;
 }
 
 .feature-card h3 {
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: -.025em;
@@ -614,7 +614,7 @@ button {
 .feature-card p {
     max-width: 19rem;
     margin: .7rem 0 1.3rem;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .82rem;
     line-height: 1.75;
 }
@@ -624,7 +624,7 @@ button {
     bottom: 1.55rem;
     display: flex;
     gap: .5rem;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .72rem;
     font-weight: 700;
 }
@@ -656,17 +656,17 @@ button {
     align-items: start;
     gap: 1rem;
     padding: 1.35rem 0;
-    border-top: 1px solid var(--resumate-border);
+    border-top: 1px solid var(--PromptCV-border);
 }
 
 .steps-list li:last-child {
-    border-bottom: 1px solid var(--resumate-border);
+    border-bottom: 1px solid var(--PromptCV-border);
 }
 
 .step-number {
     padding-top: .15rem;
-    color: var(--resumate-accent);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-serif);
     font-size: 1.1rem;
 }
 
@@ -678,13 +678,13 @@ button {
 
 .steps-list p {
     margin: .4rem 0 0;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .8rem;
     line-height: 1.7;
 }
 
 .step-arrow {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .95rem;
 }
 
@@ -699,7 +699,7 @@ button {
     align-items: center;
     gap: 4rem;
     padding: clamp(2rem, 6vw, 4.5rem);
-    border: 1px solid var(--resumate-border);
+    border: 1px solid var(--PromptCV-border);
     border-radius: 1.5rem;
     background:
         radial-gradient(ellipse at 88% 10%, rgba(57, 183, 154, .12), transparent 40%),
@@ -726,8 +726,8 @@ button {
 .checklist-top {
     gap: .55rem;
     padding-bottom: 1.15rem;
-    border-bottom: 1px solid var(--resumate-border);
-    color: var(--resumate-muted);
+    border-bottom: 1px solid var(--PromptCV-border);
+    color: var(--PromptCV-muted);
     font-size: .59rem;
     font-weight: 700;
     letter-spacing: .12em;
@@ -737,12 +737,12 @@ button {
     width: .45rem;
     height: .45rem;
     border-radius: 50%;
-    background: var(--resumate-accent);
+    background: var(--PromptCV-accent);
 }
 
 .check-status {
     margin-left: auto;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .check-row {
@@ -760,20 +760,20 @@ button {
     place-items: center;
     border-radius: 50%;
     background: rgba(72, 229, 194, .12);
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .7rem;
 }
 
 .check-label {
     margin-left: auto;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .52rem;
     letter-spacing: .1em;
 }
 
 .check-footnote {
     margin-top: 1rem;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .68rem;
 }
 
@@ -832,7 +832,7 @@ button {
 }
 
 .template-name {
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -.06em;
@@ -873,11 +873,11 @@ button {
     right: 0;
     bottom: 2.3rem;
     padding: .7rem 1rem;
-    border: 1px solid var(--resumate-border);
+    border: 1px solid var(--PromptCV-border);
     border-radius: 999px;
     background: #0b2528;
-    color: var(--resumate-accent);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-serif);
     font-size: .88rem;
     font-style: italic;
 }
@@ -895,7 +895,7 @@ button {
 
 .template-tags span {
     padding: .4rem .75rem;
-    border: 1px solid var(--resumate-border);
+    border: 1px solid var(--PromptCV-border);
     border-radius: 999px;
     color: #c0ceca;
     font-size: .67rem;
@@ -964,7 +964,7 @@ button {
 }
 
 .faq-section {
-    background: var(--resumate-bg);
+    background: var(--PromptCV-bg);
 }
 
 .faq-layout {
@@ -974,11 +974,11 @@ button {
 }
 
 .faq-list details {
-    border-top: 1px solid var(--resumate-border);
+    border-top: 1px solid var(--PromptCV-border);
 }
 
 .faq-list details:last-child {
-    border-bottom: 1px solid var(--resumate-border);
+    border-bottom: 1px solid var(--PromptCV-border);
 }
 
 .faq-list summary {
@@ -1005,7 +1005,7 @@ button {
     right: .2rem;
     width: 13px;
     height: 1px;
-    background: var(--resumate-accent);
+    background: var(--PromptCV-accent);
     content: "";
 }
 
@@ -1021,7 +1021,7 @@ button {
 .faq-list details p {
     max-width: 42rem;
     margin: -.15rem 2rem 1.4rem 0;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .83rem;
     line-height: 1.8;
 }
@@ -1047,7 +1047,7 @@ button {
 
 .final-cta-inner > p:not(.eyebrow) {
     margin: 1.25rem 0 1.8rem;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .92rem;
 }
 
@@ -1081,7 +1081,7 @@ button {
 
 .footer-brand p {
     margin: .9rem 0 0;
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .76rem;
 }
 
@@ -1101,13 +1101,13 @@ button {
 
 .footer-column a,
 .footer-bottom {
-    color: var(--resumate-muted);
+    color: var(--PromptCV-muted);
     font-size: .68rem;
 }
 
 .footer-column a:hover,
 .footer-bottom a:hover {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .footer-bottom {
@@ -1120,7 +1120,7 @@ button {
 }
 
 .footer-star {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .js .reveal {

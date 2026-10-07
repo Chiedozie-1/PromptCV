@@ -26,7 +26,7 @@
 
 .nav-links a:hover,
 .nav-login:hover {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .nav-actions {
@@ -34,7 +34,7 @@
 }
 
 .nav-actions .nav-login {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     letter-spacing: 0;
 }
 
@@ -82,12 +82,12 @@
     border-color: rgba(72, 229, 194, .45);
     background: transparent;
     box-shadow: none;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }
 
 .button-outline:hover {
-    border-color: var(--resumate-accent);
+    border-color: var(--PromptCV-accent);
     background: rgba(72, 229, 194, .08);
     box-shadow: none;
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
 }

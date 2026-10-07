@@ -22,7 +22,7 @@
 
 .faq-hero-copy h1 {
     margin: 0;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(3.9rem, 7vw, 6.3rem);
     font-weight: 500;
     letter-spacing: -.075em;
@@ -30,7 +30,7 @@
 }
 
 .faq-hero-copy h1 em {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@
     border: 0;
     background: transparent;
     color: #284439;
-    font: 400 .74rem var(--resumate-sans);
+    font: 400 .74rem var(--PromptCV-sans);
     outline: 0;
 }
 
@@ -156,7 +156,7 @@
 
 .faq-hero-card strong {
     margin-top: 1.55rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.85rem;
     font-weight: 500;
     letter-spacing: -.045em;
@@ -191,7 +191,7 @@
     bottom: .2rem;
     transform: rotate(5deg);
     color: #83c7b1;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.1rem;
     font-style: italic;
     line-height: 1.3;
@@ -272,7 +272,7 @@
     border-radius: .55rem;
     background: #f4f2eb;
     color: #345348;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .92rem;
     line-height: 1.35;
     transition: border-color .18s ease, background .18s ease, transform .18s ease;
@@ -287,7 +287,7 @@
 .faq-popular-grid a span {
     flex: 0 0 auto;
     color: #488a71;
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
     font-size: .8rem;
 }
 
@@ -408,14 +408,14 @@
     gap: .7rem;
     margin: 0 0 .6rem;
     color: #315244;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.4rem;
     font-weight: 500;
 }
 
 .faq-group > h3 span {
     color: #4a9277;
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
     font-size: .52rem;
     font-weight: 700;
     letter-spacing: .08em;
@@ -500,7 +500,7 @@
 
 .faq-no-results strong {
     color: #315345;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.35rem;
     font-weight: 500;
 }
@@ -522,11 +522,11 @@
     font-weight: 700;
 }
 
-.ask-resumate-section {
+.ask-PromptCV-section {
     background: #faf9f5;
 }
 
-.ask-resumate-card {
+.ask-PromptCV-card {
     position: relative;
     display: grid;
     grid-template-columns: .85fr 1.15fr;
@@ -542,26 +542,26 @@
     color: #edf3ee;
 }
 
-.ask-resumate-copy,
-.ask-resumate-form {
+.ask-PromptCV-copy,
+.ask-PromptCV-form {
     position: relative;
     z-index: 1;
 }
 
-.ask-resumate-copy .eyebrow {
+.ask-PromptCV-copy .eyebrow {
     color: #69c9a9;
 }
 
-.ask-resumate-copy .section-title {
+.ask-PromptCV-copy .section-title {
     color: #f1f3ed;
     font-size: clamp(2.7rem, 5vw, 4.3rem);
 }
 
-.ask-resumate-copy .section-title em {
+.ask-PromptCV-copy .section-title em {
     color: #6bd0ad;
 }
 
-.ask-resumate-copy > p:not(.eyebrow) {
+.ask-PromptCV-copy > p:not(.eyebrow) {
     max-width: 28rem;
     margin: 1rem 0 1.2rem;
     color: #b3c3bb;
@@ -590,14 +590,14 @@
     box-shadow: 0 0 0 4px rgba(114, 210, 173, .12);
 }
 
-.ask-resumate-form {
+.ask-PromptCV-form {
     padding: 1.3rem;
     border: 1px solid rgba(168, 214, 196, .15);
     border-radius: .7rem;
     background: rgba(255, 255, 255, .055);
 }
 
-.ask-resumate-form > label {
+.ask-PromptCV-form > label {
     display: block;
     margin-bottom: .6rem;
     color: #dfe9e1;
@@ -622,7 +622,7 @@
     border: 0;
     background: transparent;
     color: #a7b9b0;
-    font: 400 .67rem/1.5 var(--resumate-sans);
+    font: 400 .67rem/1.5 var(--PromptCV-sans);
 }
 
 .ask-input-wrap input::placeholder {
@@ -640,7 +640,7 @@
     font-size: 1rem;
 }
 
-.ask-resumate-form > button {
+.ask-PromptCV-form > button {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
@@ -657,14 +657,14 @@
     opacity: .75;
 }
 
-.ask-resumate-form > p {
+.ask-PromptCV-form > p {
     margin: .8rem 0 0;
     color: #94a89f;
     font-size: .58rem;
     line-height: 1.7;
 }
 
-.ask-resumate-decoration {
+.ask-PromptCV-decoration {
     position: absolute;
     right: -1.5rem;
     bottom: -3.5rem;
@@ -674,7 +674,7 @@
     border-radius: 50%;
 }
 
-.ask-resumate-decoration > span {
+.ask-PromptCV-decoration > span {
     position: absolute;
     top: 2.3rem;
     left: 3rem;
@@ -682,7 +682,7 @@
     font-size: 3rem;
 }
 
-.ask-resumate-decoration > i {
+.ask-PromptCV-decoration > i {
     position: absolute;
     top: 5rem;
     left: 4rem;
@@ -692,14 +692,14 @@
     background: rgba(121, 193, 161, .1);
 }
 
-.ask-resumate-decoration > i:nth-of-type(2) {
+.ask-PromptCV-decoration > i:nth-of-type(2) {
     top: 7rem;
     left: 6rem;
     width: 6rem;
     transform: rotate(-31deg);
 }
 
-.ask-resumate-decoration > i:nth-of-type(3) {
+.ask-PromptCV-decoration > i:nth-of-type(3) {
     top: 9rem;
     left: 3.7rem;
     width: 8rem;
@@ -749,13 +749,13 @@
 .faq-help-links b {
     grid-row: span 2;
     color: #478c73;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .9rem;
     font-weight: 500;
 }
 
 .faq-help-links strong {
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -967,7 +967,7 @@
         gap: .35rem;
     }
 
-    .ask-resumate-card {
+    .ask-PromptCV-card {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 2rem 1.4rem;

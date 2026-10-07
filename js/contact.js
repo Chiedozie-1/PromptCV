@@ -12,7 +12,7 @@
 
     topicInputs.forEach((input) => {
         input.addEventListener("change", () => {
-            topicPreview.textContent = `Email subject: Resu Mate Website | ${input.value}`;
+            topicPreview.textContent = `Email subject: PromptCV Website | ${input.value}`;
             status.textContent = "";
         });
     });
@@ -38,9 +38,9 @@
         const name = String(formData.get("name")).trim();
         const email = String(formData.get("email")).trim();
         const message = String(formData.get("message")).trim();
-        const subject = `Resu Mate Website | ${topic}`;
+        const subject = `PromptCV Website | ${topic}`;
         const body = [
-            "A message from the Resu Mate website contact form.",
+            "A message from the PromptCV website contact form.",
             "",
             `Name: ${name}`,
             `Email: ${email}`,
@@ -51,6 +51,6 @@
         ].join("\n");
         const params = new URLSearchParams({ subject, body });
         window.location.href = `mailto:${recipient}?${params.toString()}`;
-        status.textContent = "Your email app should open with the Resu Mate website and selected topic in the subject. Review your message there, then press Send.";
+        status.textContent = "Your email app should open with the PromptCV website and selected topic in the subject. Review your message there, then press Send.";
     });
 })();

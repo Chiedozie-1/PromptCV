@@ -22,8 +22,8 @@
 
 .journey-hero-copy h1 {
     margin: 0;
-    color: var(--resumate-text);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-text);
+    font-family: var(--PromptCV-serif);
     font-size: clamp(3.8rem, 7vw, 6.4rem);
     font-weight: 500;
     letter-spacing: -.07em;
@@ -31,7 +31,7 @@
 }
 
 .journey-hero-copy h1 em {
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-weight: 500;
 }
 
@@ -90,7 +90,7 @@
 
 .paper-name {
     margin-top: 1.2rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -.06em;
@@ -166,7 +166,7 @@
     border: 1px solid #91b8a3;
     border-radius: 50%;
     color: #628a74;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .58rem;
     font-style: italic;
     line-height: 1.1;
@@ -179,7 +179,7 @@
     bottom: .1rem;
     transform: rotate(-6deg);
     color: #83c8b2;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.2rem;
     font-style: italic;
     line-height: 1.25;
@@ -266,13 +266,13 @@
 
 .process-ribbon a > span {
     color: #328e76;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
 }
 
 .process-ribbon a > b {
     flex: 1;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -353,12 +353,12 @@
 
 .journey-quick-number {
     color: #398a73;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .92rem;
 }
 
 .journey-quick-label {
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
     font-weight: 600;
 }
@@ -399,8 +399,8 @@
 }
 
 .journey-step-label > span {
-    color: var(--resumate-accent);
-    font-family: var(--resumate-serif);
+    color: var(--PromptCV-accent);
+    font-family: var(--PromptCV-serif);
     font-size: 1rem;
     letter-spacing: 0;
 }
@@ -442,7 +442,7 @@
     place-items: center;
     border-radius: 50%;
     background: rgba(76, 226, 194, .12);
-    color: var(--resumate-accent);
+    color: var(--PromptCV-accent);
     font-size: .65rem;
 }
 
@@ -547,7 +547,7 @@
 
 .sidebar-item i {
     color: #9aa59a;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .56rem;
     font-style: normal;
 }
@@ -585,7 +585,7 @@
 .builder-form > strong {
     margin: .35rem 0 .85rem;
     color: #30473c;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .95rem;
 }
 
@@ -641,7 +641,7 @@
     bottom: .05rem;
     transform: rotate(-5deg);
     color: #76b49a;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.05rem;
     font-style: italic;
 }
@@ -745,14 +745,14 @@
 
 .walkthrough-brand {
     color: #315348;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .57rem;
     font-weight: 700;
 }
 
 .walkthrough-brand i {
     color: #46977b;
-    font-family: var(--resumate-sans);
+    font-family: var(--PromptCV-sans);
     font-size: .48rem;
     font-style: normal;
 }
@@ -817,7 +817,7 @@
 
 .walkthrough-app-main > strong {
     margin-top: .3rem;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .98rem;
 }
 
@@ -842,7 +842,7 @@
 
 .walkthrough-app-card > i {
     color: #5d9a7e;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .63rem;
     font-style: normal;
 }
@@ -1018,7 +1018,7 @@
 
 .refine-card-heading b {
     color: #344d42;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .82rem;
 }
 
@@ -1052,7 +1052,7 @@
 .refine-note p {
     margin: .35rem 0 0;
     color: #778278;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .85rem;
     font-style: italic;
 }
@@ -1074,7 +1074,7 @@
 .refine-suggestion p {
     margin: .4rem 0 0;
     color: #355448;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .9rem;
     line-height: 1.6;
 }
@@ -1106,7 +1106,7 @@
     left: .1rem;
     transform: rotate(-5deg);
     color: #749b80;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.05rem;
     font-style: italic;
 }
@@ -1180,7 +1180,7 @@
 .tailor-document b {
     display: block;
     color: #365146;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .7rem;
 }
 
@@ -1238,7 +1238,7 @@
 
 .tailor-insight b {
     color: #466a55;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: .65rem;
 }
 
@@ -1253,7 +1253,7 @@
     bottom: -.2rem;
     transform: rotate(5deg);
     color: #5f8d74;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.05rem;
     font-style: italic;
 }
@@ -1342,7 +1342,7 @@
 .outcome-card h3 {
     margin: .5rem 0 0;
     color: #203b34;
-    font-family: var(--resumate-serif);
+    font-family: var(--PromptCV-serif);
     font-size: 1.3rem;
     font-weight: 600;
 }
