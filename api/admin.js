@@ -68,11 +68,13 @@ async function supabaseFetch(path, options = {}) {
         }
         console.error("Admin database request failed.", {
             status: response.status,
-            endpoint: path.split("?")[0]
+            endpoint: path.split("?")[0],
+            code: failure?.code || null
         });
         const error = new Error("The dashboard could not load data from the database");
         error.status = response.status;
         error.code = failure?.code;
+        error.endpoint = path.split("?")[0];
         throw error;
     }
     return response;
@@ -513,6 +515,21 @@ module.exports = async function admin(request, response) {
         if (action === "create-campaign" && error.code === "23505") {
             return sendJson(response, 409, {
                 error: "Another launch campaign is already queued or processing. Resume it before creating a new one."
+            });
+        }
+        if (["42P01", "PGRST202", "PGRST205"].includes(error.code)) {
+            return sendJson(response, 503, {
+                error: "Dashboard database setup is incomplete. Apply supabase/migrations/202610090002_admin_dashboard.sql in the Supabase project used by this site."
+            });
+        }
+        if (["42501", "PGRST301", "PGRST302"].includes(error.code) || error.status === 401 || error.status === 403) {
+            return sendJson(response, 503, {
+                error: "Supabase rejected the dashboard database credentials. Check SUPABASE_URL and the server-side service-role key in this Vercel deployment."
+            });
+        }
+        if (error.code === "PGRST204") {
+            return sendJson(response, 503, {
+                error: "The deployed Supabase schema does not match the dashboard. Review the waitlist schema and apply the dashboard migration."
             });
         }
         return sendJson(response, 503, { error: error.message || "The dashboard request failed" });

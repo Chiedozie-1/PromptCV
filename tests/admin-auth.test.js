@@ -97,6 +97,40 @@ test("admin data API rejects unauthenticated requests", async () => {
     assert.equal(response.body.error, "Sign in to access the admin dashboard");
 });
 
+test("admin database errors identify a missing dashboard migration without exposing provider details", async (t) => {
+    setAdminEnvironment(t);
+    const previousUrl = process.env.SUPABASE_URL;
+    const previousKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const previousFetch = global.fetch;
+    process.env.SUPABASE_URL = "https://project.example";
+    process.env.SUPABASE_SERVICE_ROLE_KEY = "test-server-key";
+    const session = createSessionCookie(TEST_EMAIL, TEST_SECRET, 600).split(";")[0];
+    global.fetch = async () => new Response(JSON.stringify({
+        code: "PGRST202",
+        message: "private database implementation detail"
+    }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" }
+    });
+    t.after(() => {
+        global.fetch = previousFetch;
+        if (previousUrl === undefined) delete process.env.SUPABASE_URL;
+        else process.env.SUPABASE_URL = previousUrl;
+        if (previousKey === undefined) delete process.env.SUPABASE_SERVICE_ROLE_KEY;
+        else process.env.SUPABASE_SERVICE_ROLE_KEY = previousKey;
+    });
+
+    const response = responseStub();
+    await adminHandler({
+        method: "GET",
+        query: { action: "overview" },
+        headers: { cookie: session }
+    }, response);
+    assert.equal(response.statusCode, 503);
+    assert.match(response.body.error, /Apply supabase\/migrations\/202610090002_admin_dashboard\.sql/);
+    assert.doesNotMatch(response.body.error, /private database implementation detail/);
+});
+
 test("admin JavaScript only references elements present in the dashboard HTML", () => {
     const html = fs.readFileSync(path.join(__dirname, "..", "admin", "index.html"), "utf8");
     const script = fs.readFileSync(path.join(__dirname, "..", "admin", "admin.js"), "utf8");
@@ -104,6 +138,16 @@ test("admin JavaScript only references elements present in the dashboard HTML", 
     const referencedIds = new Set([...script.matchAll(/\bbyId\("([^"]+)"\)/g)].map((match) => match[1]));
     const missingIds = [...referencedIds].filter((id) => !declaredIds.has(id));
     assert.deepEqual(missingIds, []);
+});
+
+test("admin theme toggle persists the selected color scheme", () => {
+    const html = fs.readFileSync(path.join(__dirname, "..", "admin", "index.html"), "utf8");
+    const script = fs.readFileSync(path.join(__dirname, "..", "admin", "admin.js"), "utf8");
+    const styles = fs.readFileSync(path.join(__dirname, "..", "admin", "admin.css"), "utf8");
+    assert.match(html, /id="theme-toggle"/);
+    assert.match(script, /localStorage\.getItem\("promptcv_admin_theme"\)/);
+    assert.match(script, /localStorage\.setItem\("promptcv_admin_theme"/);
+    assert.match(styles, /:root\[data-theme="dark"\]/);
 });
 
 test("unsubscribe links require confirmation before changing subscriber status", async (t) => {

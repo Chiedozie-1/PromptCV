@@ -53,6 +53,29 @@
         return `"${safeText.replace(/"/g, '""')}"`;
     };
 
+    function applyTheme(theme, persist = false) {
+        const isDark = theme === "dark";
+        document.documentElement.dataset.theme = isDark ? "dark" : "light";
+        const toggle = byId("theme-toggle");
+        toggle.setAttribute("aria-pressed", String(isDark));
+        toggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+        byId("theme-icon").textContent = isDark ? "☀" : "☾";
+        byId("theme-label").textContent = isDark ? "Light mode" : "Dark mode";
+        if (persist) {
+            try {
+                localStorage.setItem("promptcv_admin_theme", isDark ? "dark" : "light");
+            } catch {
+                setGlobalMessage("Theme changed for this visit, but the preference could not be saved.", "error");
+            }
+        }
+    }
+
+    try {
+        applyTheme(localStorage.getItem("promptcv_admin_theme") === "dark" ? "dark" : "light");
+    } catch {
+        applyTheme("light");
+    }
+
     try {
         const saved = JSON.parse(localStorage.getItem("promptcv_campaign_submission") || "null");
         if (saved && typeof saved.idempotency_key === "string"
@@ -638,6 +661,10 @@
     });
     byId("sign-out").addEventListener("click", signOut);
     byId("settings-sign-out").addEventListener("click", signOut);
+    byId("theme-toggle").addEventListener("click", () => {
+        const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(theme, true);
+    });
     byId("subscriber-search").addEventListener("input", () => {
         window.clearTimeout(state.searchTimer);
         state.searchTimer = window.setTimeout(() => {
