@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06191b">
+    <meta name="description" content="PromptCV administrator dashboard">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin — PromptCV</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+    <main id="admin-app">
+        <section id="login-view" class="login-shell" aria-labelledby="login-title">
+            <div class="login-card">
+                <a class="admin-brand" href="/" aria-label="PromptCV home">
+                    <span class="brand-mark" aria-hidden="true">P</span>
+                    <span>PromptCV</span>
+                </a>
+                
+                <p class="eyebrow">ADMINISTRATION</p>
+                <h1 id="login-title">Welcome back</h1>
+                <p class="muted">Sign in with the authorized PromptCV administrator account.</p>
+                <form id="login-form">
+                    <label for="login-email">Email address</label>
+                    <input id="login-email" name="email" type="email" autocomplete="username" required>
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                    <button class="button button-primary button-full" type="submit">Sign in</button>
+                </form>
+                <p id="login-message" class="message" role="status" aria-live="polite"></p>
+                <a class="back-link" href="/">← Back to PromptCV</a>
+            </div>
+        </section>
+
+        <div id="dashboard-view" class="dashboard-shell" hidden>
+            <aside class="sidebar" aria-label="Admin navigation">
+                <a class="admin-brand" href="/" aria-label="PromptCV home">
+                    <span class="brand-mark" aria-hidden="true">P</span>
+                    <span>PromptCV</span>
+                </a>
+                <p class="sidebar-label">WORKSPACE</p>
+                <nav class="admin-nav">
+                    <button type="button" class="nav-item is-active" data-view="overview"><span aria-hidden="true">◫</span> Overview</button>
+                    <button type="button" class="nav-item" data-view="waitlist"><span aria-hidden="true">◎</span> Waitlist</button>
+                    <button type="button" class="nav-item" data-view="broadcast"><span aria-hidden="true">↗</span> Launch Broadcast</button>
+                    <button type="button" class="nav-item" data-view="analytics"><span aria-hidden="true">⌁</span> Analytics</button>
+                    <button type="button" class="nav-item" data-view="activity"><span aria-hidden="true">◷</span> Email Activity</button>
+                    <button type="button" class="nav-item" data-view="settings"><span aria-hidden="true">⚙</span> Settings</button>
+                </nav>
+                <div class="sidebar-footer">
+                    <span class="online-indicator" aria-hidden="true"></span>
+                    <span>Admin workspace</span>
+                </div>
+            </aside>
+
+            <div class="dashboard-main">
+                <header class="topbar">
+                    <div>
+                        <p class="eyebrow">PROMPTCV / ADMIN</p>
+                        <h1 id="page-title">Overview</h1>
+                    </div>
+                    <div class="account-menu">
+                        <span id="admin-email" class="account-email"></span>
+                        <button id="sign-out" type="button" class="button button-quiet">Sign out</button>
+                    </div>
+                </header>
+
+                <div id="global-message" class="global-message" role="status" aria-live="polite" hidden></div>
+
+                <section class="admin-view" data-panel="overview" aria-labelledby="overview-heading">
+                    <div class="section-intro">
+                        <div><p class="eyebrow">YOUR WORKSPACE</p><h2 id="overview-heading">A clear view of your launch</h2></div>
+                        <button type="button" class="button button-secondary" data-refresh="overview">Refresh data</button>
+                    </div>
+                    <div id="overview-cards" class="metric-grid" aria-live="polite">
+                        <div class="metric-card skeleton"></div><div class="metric-card skeleton"></div>
+                        <div class="metric-card skeleton"></div><div class="metric-card skeleton"></div>
+                    </div>
+                    <div id="overview-warnings" class="stack"></div>
+                    <div class="overview-grid">
+                        <article class="panel trend-panel">
+                            <div class="panel-heading"><div><p class="eyebrow">LAST 30 DAYS</p><h3>Signup activity</h3></div><span class="muted">New subscribers by day</span></div>
+                            <div id="signup-trend" class="trend-chart" aria-label="Daily waitlist signups for the last 30 UTC calendar days"></div>
+                        </article>
+                        <article class="panel">
+                            <div class="panel-heading"><div><p class="eyebrow">LATEST</p><h3>Launch campaign</h3></div></div>
+                            <div id="latest-campaign" class="empty-state">Loading campaign status…</div>
+                        </article>
+                    </div>
+                    <div class="overview-grid">
+                        <article class="panel">
+                            <div class="panel-heading"><div><p class="eyebrow">WAITLIST</p><h3>Recent signups</h3></div><button type="button" class="text-button" data-go="waitlist">View waitlist →</button></div>
+                            <div id="recent-signups" class="list-content">Loading signups…</div>
+                        </article>
+                        <article class="panel">
+                            <div class="panel-heading"><div><p class="eyebrow">EMAIL</p><h3>Recent activity</h3></div><button type="button" class="text-button" data-go="activity">View activity →</button></div>
+                            <div id="recent-activity" class="list-content">Loading email activity…</div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="admin-view" data-panel="waitlist" aria-labelledby="waitlist-heading" hidden>
+                    <div class="section-intro"><div><p class="eyebrow">SUBSCRIBERS</p><h2 id="waitlist-heading">Waitlist</h2><p class="muted">Search, filter, and export contacts eligible to receive the launch email.</p></div><button id="export-csv" type="button" class="button button-secondary">Export eligible CSV</button></div>
+                    <div class="panel">
+                        <div class="table-toolbar">
+                            <label class="search-control"><span class="visually-hidden">Search email</span><span aria-hidden="true">⌕</span><input id="subscriber-search" type="search" placeholder="Search email address"></label>
+                            <label class="select-control"><span class="visually-hidden">Filter subscriber status</span><select id="subscriber-status"><option value="">All statuses</option><option value="active">Active</option><option value="unsubscribed">Unsubscribed</option><option value="suppressed">Suppressed</option></select></label>
+                            <label class="select-control"><span class="visually-hidden">Sort by signup date</span><select id="subscriber-sort"><option value="desc">Newest first</option><option value="asc">Oldest first</option></select></label>
+                            <span id="subscriber-count" class="muted count-label"></span>
+                        </div>
+                        <div class="table-wrap"><table><thead><tr><th>Email address</th><th>Signup date</th><th>Status / consent</th><th>Launch email</th></tr></thead><tbody id="subscriber-rows"><tr><td colspan="4" class="empty-state">Loading subscribers…</td></tr></tbody></table></div>
+                        <div class="table-footer"><span id="subscriber-page-label" class="muted"></span><div class="pagination"><button id="subscribers-previous" type="button" class="button button-quiet">Previous</button><button id="subscribers-next" type="button" class="button button-quiet">Next</button></div></div>
+                        <p id="export-message" class="message" role="status" aria-live="polite"></p>
+                    </div>
+                </section>
+
+                <section class="admin-view" data-panel="broadcast" aria-labelledby="broadcast-heading" hidden>
+                    <div class="section-intro"><div><p class="eyebrow">ANNOUNCEMENT</p><h2 id="broadcast-heading">Launch Broadcast</h2><p class="muted">Compose and preview a launch email for eligible, consented subscribers.</p></div></div>
+                    <div class="broadcast-grid">
+                        <article class="panel editor-panel">
+                            <div class="field-group"><label for="campaign-subject">Subject line</label><input id="campaign-subject" maxlength="200" placeholder="PromptCV is here"></div>
+                            <div class="field-group"><label for="campaign-preview">Preview text <span class="muted">(optional)</span></label><input id="campaign-preview" maxlength="200" placeholder="A clearer way to tell your career story"></div>
+                            <div class="field-group"><label for="campaign-body">Email message</label><textarea id="campaign-body" rows="11" maxlength="30000" placeholder="Write your launch announcement. Line breaks are preserved in the email."></textarea><span class="field-hint">Plain text is converted to a readable branded email with a PromptCV link and unsubscribe link.</span></div>
+                            <div class="editor-actions"><button id="preview-email" type="button" class="button button-secondary">Preview email</button><button id="send-test" type="button" class="button button-quiet">Send test to me</button></div>
+                            <p id="campaign-message" class="message" role="status" aria-live="polite"></p>
+                        </article>
+                        <aside class="panel audience-panel">
+                            <p class="eyebrow">AUDIENCE</p><h3>Eligible subscribers</h3>
+                            <p id="eligible-count" class="audience-count">Loading…</p>
+                            <p class="muted">Active subscribers who have consented to receive launch updates. Unsubscribed and suppressed contacts are excluded.</p>
+                            <button id="send-campaign" type="button" class="button button-primary button-full" disabled>Send launch email</button>
+                            <div id="campaign-progress" class="campaign-progress" aria-live="polite" hidden></div>
+                            <div class="notice notice-neutral">The dashboard processes a maximum of 10 messages per batch. Keep this tab open until the campaign finishes; reopening the dashboard resumes any queued campaign.</div>
+                        </aside>
+                    </div>
+                    <article id="email-preview" class="panel email-preview" hidden>
+                        <div class="panel-heading"><div><p class="eyebrow">PREVIEW</p><h3 id="preview-subject"></h3></div><button id="close-preview" type="button" class="button button-quiet">Close preview</button></div>
+                        <p id="preview-snippet" class="muted"></p><div id="preview-body" class="preview-body"></div>
+                        <a href="https://promptcvbynic.vercel.app" class="button button-primary preview-cta">Visit PromptCV</a><p class="field-hint">You received this because you joined the PromptCV waitlist. Unsubscribe link included in the sent email.</p>
+                    </article>
+                    <dialog id="confirm-campaign" class="confirm-dialog" aria-labelledby="confirm-title">
+                        <form method="dialog" class="dialog-content">
+                            <p class="eyebrow">FINAL CONFIRMATION</p><h3 id="confirm-title">Send launch email?</h3>
+                            <p>This will send <strong id="confirm-subject"></strong> to <strong id="confirm-count"></strong> eligible subscribers. This action cannot be undone.</p>
+                            <div class="dialog-actions"><button value="cancel" class="button button-quiet">Cancel</button><button id="confirm-send" value="default" class="button button-primary">Confirm and send</button></div>
+                        </form>
+                    </dialog>
+                </section>
+
+                <section class="admin-view" data-panel="analytics" aria-labelledby="analytics-heading" hidden>
+                    <div class="section-intro"><div><p class="eyebrow">TRAFFIC</p><h2 id="analytics-heading">Website analytics</h2><p class="muted">Visitor and signup metrics for PromptCV.</p></div></div>
+                    <article class="panel analytics-empty">
+                        <span class="analytics-icon" aria-hidden="true">⌁</span><p class="eyebrow">NOT CONNECTED</p><h3>Analytics not configured</h3>
+                        <p class="muted">No website traffic numbers are shown until a privacy-conscious analytics provider is configured. Waitlist signups are measured from Supabase, but they are not a substitute for visitors or sessions.</p>
+                        <div class="notice notice-neutral"><strong>Suggested setup: Plausible Analytics</strong><br>Create a PromptCV site in Plausible, add its lightweight script to the public pages, then connect the Plausible API key and site domain in Vercel server-side environment variables. Define the reporting timezone and compare visitors, sessions, and page views over the same date range. Do not expose the API key in browser code.</div>
+                    </article>
+                </section>
+
+                <section class="admin-view" data-panel="activity" aria-labelledby="activity-heading" hidden>
+                    <div class="section-intro"><div><p class="eyebrow">DELIVERY</p><h2 id="activity-heading">Email Activity</h2><p class="muted">Signup alerts are separate from launch campaign emails. “Sent” means accepted by the provider, not confirmed delivered.</p></div><label class="select-control"><span class="visually-hidden">Filter email activity status</span><select id="activity-status"><option value="">All statuses</option><option value="pending">Pending</option><option value="sent">Sent / accepted</option><option value="failed">Failed</option></select></label></div>
+                    <div class="panel">
+                        <div class="table-toolbar"><span id="activity-count" class="muted count-label"></span></div>
+                        <div class="table-wrap"><table><thead><tr><th>Notification</th><th>Recipient</th><th>Status</th><th>Attempts</th><th>Created / sent</th><th>Provider message ID</th><th>Failure reason</th></tr></thead><tbody id="activity-rows"><tr><td colspan="7" class="empty-state">Loading activity…</td></tr></tbody></table></div>
+                        <div class="table-footer"><span id="activity-page-label" class="muted"></span><div class="pagination"><button id="activity-previous" type="button" class="button button-quiet">Previous</button><button id="activity-next" type="button" class="button button-quiet">Next</button></div></div>
+                    </div>
+                </section>
+
+                <section class="admin-view" data-panel="settings" aria-labelledby="settings-heading" hidden>
+                    <div class="section-intro"><div><p class="eyebrow">PREFERENCES</p><h2 id="settings-heading">Settings</h2><p class="muted">Account and non-secret integration status.</p></div></div>
+                    <div class="settings-grid">
+                        <article class="panel"><p class="eyebrow">ACCOUNT</p><h3>Administrator</h3><p id="settings-email" class="settings-value"></p><button id="settings-sign-out" type="button" class="button button-quiet">Sign out</button></article>
+                        <article class="panel"><p class="eyebrow">INTEGRATIONS</p><h3>Configuration status</h3><ul id="configuration-list" class="configuration-list"><li>Loading…</li></ul><p class="field-hint">Configure credentials in Vercel environment variables. Secret values are never displayed here.</p></article>
+                        <article class="panel"><p class="eyebrow">SAFE CHECK</p><h3>Test email delivery</h3><p class="muted">Send a test message to your signed-in administrator email only.</p><button id="settings-test-email" type="button" class="button button-secondary">Send test email</button><p id="settings-message" class="message" role="status" aria-live="polite"></p></article>
+                    </div>
+                </section>
+                <footer class="admin-footer"><span>PromptCV Admin</span><a href="/">Return to website</a></footer>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
