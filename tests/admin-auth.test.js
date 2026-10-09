@@ -150,6 +150,19 @@ test("admin theme toggle persists the selected color scheme", () => {
     assert.match(styles, /:root\[data-theme="dark"\]/);
 });
 
+test("admin wordmarks use the same symbol and accent treatment as the public site", () => {
+    const html = fs.readFileSync(path.join(__dirname, "..", "admin", "index.html"), "utf8");
+    const publicHtml = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+    const adminStyles = fs.readFileSync(path.join(__dirname, "..", "admin", "admin.css"), "utf8");
+    const publicStyles = fs.readFileSync(path.join(__dirname, "..", "css", "main.css"), "utf8");
+    assert.equal((html.match(/class="brand-mark" aria-hidden="true">✦<\/span>/g) || []).length, 2);
+    assert.equal((html.match(/Prompt<span class="brand-mate">CV<\/span>/g) || []).length, 2);
+    assert.match(publicHtml, /class="brand-mark" aria-hidden="true">✦<\/span>/);
+    assert.match(publicStyles, /\.brand-mate\s*\{[^}]*font-style:\s*italic/s);
+    assert.match(adminStyles, /\.brand-mate\s*\{[^}]*font-style:\s*italic/s);
+    assert.match(adminStyles, /\.brand-mark\s*\{[^}]*border:\s*1px solid var\(--teal\)/s);
+});
+
 test("unsubscribe links require confirmation before changing subscriber status", async (t) => {
     setAdminEnvironment(t);
     const subscriber = "120e4567-e89b-42d3-a456-426614174000";

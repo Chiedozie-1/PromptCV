@@ -9,6 +9,7 @@
     waitlistDialog.setAttribute("aria-labelledby", "waitlist-title");
     waitlistDialog.setAttribute("aria-describedby", "waitlist-description");
     const privacyPath = window.location.pathname.includes("/comapny/") ? "../privacy.html" : "privacy.html";
+    const termsPath = window.location.pathname.includes("/comapny/") ? "../terms.html" : "terms.html";
     waitlistDialog.innerHTML = `
         <div class="waitlist-dialog-panel">
             <button class="waitlist-dialog-close" type="button" aria-label="Close dialog">&times;</button>
@@ -20,8 +21,9 @@
                 <input id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
                 <label class="waitlist-consent">
                     <input name="consent" type="checkbox" required>
-                    <span>By joining, you agree to receive PromptCV launch updates by email. You can withdraw consent by contacting us. See our <a href="${privacyPath}">Privacy Policy</a>.</span>
+                    <span>By joining, you agree to receive PromptCV launch updates by email. You can withdraw consent by contacting us.</span>
                 </label>
+                <p class="waitlist-legal-links">Read the <a href="${privacyPath}">Privacy Policy</a> and <a href="${termsPath}">Terms of Service</a>.</p>
                 <button class="button button-large waitlist-submit" type="submit">Join the Waitlist <span aria-hidden="true">→</span></button>
                 <p class="waitlist-status" role="status" aria-live="polite"></p>
             </form>

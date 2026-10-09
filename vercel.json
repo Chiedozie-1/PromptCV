@@ -1,8 +1,37 @@
 {
+  "redirects": [
+    {
+      "source": "/resources.html",
+      "destination": "/resources",
+      "permanent": true
+    },
+    {
+      "source": "/cookies.html",
+      "destination": "/cookie-preferences",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/admin",
       "destination": "/admin/index.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.html"
+    },
+    {
+      "source": "/cookie-preferences",
+      "destination": "/cookies.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
     }
   ]
 }

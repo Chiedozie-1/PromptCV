@@ -214,6 +214,19 @@
     text-underline-offset: 2px;
 }
 
+.waitlist-legal-links {
+    margin: 0;
+    color: var(--PromptCV-muted);
+    font-size: .72rem;
+    line-height: 1.6;
+}
+
+.waitlist-legal-links a {
+    color: var(--PromptCV-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .waitlist-submit {
     width: 100%;
     margin-top: .65rem;
