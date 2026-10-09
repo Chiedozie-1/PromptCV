@@ -4,6 +4,119 @@
     const year = document.querySelector("[data-current-year]");
     if (year) year.textContent = String(new Date().getFullYear());
 
+    const waitlistDialog = document.createElement("dialog");
+    waitlistDialog.className = "waitlist-dialog";
+    waitlistDialog.setAttribute("aria-labelledby", "waitlist-title");
+    waitlistDialog.setAttribute("aria-describedby", "waitlist-description");
+    const privacyPath = window.location.pathname.includes("/comapny/") ? "../privacy.html" : "privacy.html";
+    waitlistDialog.innerHTML = `
+        <div class="waitlist-dialog-panel">
+            <button class="waitlist-dialog-close" type="button" aria-label="Close dialog">&times;</button>
+            <p class="eyebrow">BE FIRST TO KNOW</p>
+            <h2 id="waitlist-title">PromptCV is Coming Soon!</h2>
+            <p class="waitlist-description" id="waitlist-description">We're building a smarter way to create professional, ATS-friendly resumes. Join the waitlist and be among the first to know when PromptCV launches.</p>
+            <form class="waitlist-form" novalidate>
+                <label for="waitlist-email">Email address</label>
+                <input id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
+                <label class="waitlist-consent">
+                    <input name="consent" type="checkbox" required>
+                    <span>By joining, you agree to receive PromptCV launch updates by email. You can withdraw consent by contacting us. See our <a href="${privacyPath}">Privacy Policy</a>.</span>
+                </label>
+                <button class="button button-large waitlist-submit" type="submit">Join the Waitlist <span aria-hidden="true">→</span></button>
+                <p class="waitlist-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>`;
+    document.body.append(waitlistDialog);
+
+    const waitlistForm = waitlistDialog.querySelector(".waitlist-form");
+    const waitlistEmail = waitlistForm.elements.email;
+    const waitlistConsent = waitlistForm.elements.consent;
+    const waitlistSubmit = waitlistForm.querySelector(".waitlist-submit");
+    const waitlistStatus = waitlistForm.querySelector(".waitlist-status");
+    let waitlistSubmitting = false;
+
+    document.addEventListener("click", (event) => {
+        const link = event.target.closest("a[href]");
+        if (!link) return;
+
+        let destination;
+        try {
+            destination = new URL(link.href);
+        } catch {
+            return;
+        }
+
+        if (destination.hostname !== "app.promptcv.com") return;
+        event.preventDefault();
+        if (!waitlistSubmitting) {
+            waitlistStatus.textContent = "";
+            waitlistStatus.classList.remove("is-error");
+            waitlistForm.hidden = false;
+            waitlistEmail.disabled = false;
+            waitlistConsent.disabled = false;
+            waitlistSubmit.disabled = false;
+            waitlistSubmit.innerHTML = 'Join the Waitlist <span aria-hidden="true">→</span>';
+            waitlistForm.reset();
+        }
+        if (!waitlistDialog.open) waitlistDialog.showModal();
+        if (!waitlistSubmitting) waitlistEmail.focus();
+    });
+
+    waitlistDialog.querySelector(".waitlist-dialog-close").addEventListener("click", () => {
+        waitlistDialog.close();
+    });
+    waitlistDialog.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") return;
+        event.preventDefault();
+        waitlistDialog.close();
+    });
+    waitlistDialog.addEventListener("click", (event) => {
+        if (event.target === waitlistDialog) waitlistDialog.close();
+    });
+
+    waitlistForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (waitlistSubmitting) return;
+        waitlistEmail.value = waitlistEmail.value.trim();
+        if (!waitlistForm.reportValidity()) return;
+
+        const email = waitlistEmail.value.toLowerCase();
+        if (!email || !waitlistEmail.validity.valid || !waitlistConsent.checked) {
+            waitlistForm.reportValidity();
+            return;
+        }
+
+        waitlistEmail.value = email;
+        waitlistSubmitting = true;
+        waitlistSubmit.disabled = true;
+        waitlistSubmit.textContent = "Joining…";
+        waitlistStatus.textContent = "Adding you to the waitlist…";
+
+        try {
+            const response = await fetch("/api/waitlist/join", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, consent: true })
+            });
+            const result = await response.json();
+            if (!response.ok || result.ok !== true) throw new Error("Waitlist signup failed");
+
+            waitlistSubmitting = false;
+            waitlistForm.hidden = true;
+            waitlistStatus.textContent = "You're on the list! We'll email you when PromptCV launches.";
+        } catch {
+            waitlistSubmitting = false;
+            waitlistSubmit.disabled = false;
+            waitlistSubmit.innerHTML = 'Join the Waitlist <span aria-hidden="true">→</span>';
+            waitlistStatus.textContent = "We couldn't add you right now. Please try again in a moment.";
+            waitlistStatus.classList.add("is-error");
+        }
+    });
+    waitlistForm.addEventListener("input", () => {
+        waitlistStatus.classList.remove("is-error");
+        waitlistStatus.textContent = "";
+    });
+
     const revealTargets = document.querySelectorAll(
         ".intro-layout, .section-heading, .feature-card, .steps-list li, .ats-card, .templates-layout, .pricing-banner, .faq-list details, .final-cta-inner, .overview-heading, .overview-card, .detail-layout, .ats-feature-layout, .feature-cta, .journey-step, .process-overview, .outcome-card"
     );

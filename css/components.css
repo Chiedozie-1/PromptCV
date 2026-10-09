@@ -91,3 +91,159 @@
     box-shadow: none;
     color: var(--PromptCV-accent);
 }
+
+.waitlist-dialog {
+    width: min(90vw, 34rem);
+    max-width: none;
+    max-height: min(90vh, 44rem);
+    padding: 0;
+    overflow: auto;
+    border: 1px solid var(--PromptCV-border);
+    border-radius: 1.4rem;
+    background: var(--PromptCV-bg-secondary);
+    color: var(--PromptCV-text);
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .5);
+}
+
+.waitlist-dialog::backdrop {
+    background: rgba(2, 12, 13, .78);
+    backdrop-filter: blur(5px);
+}
+
+.waitlist-dialog-panel {
+    position: relative;
+    padding: clamp(2rem, 6vw, 3.25rem);
+}
+
+.waitlist-dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid var(--PromptCV-border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--PromptCV-muted);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.waitlist-dialog-close:hover {
+    border-color: var(--PromptCV-accent);
+    color: var(--PromptCV-accent);
+}
+
+.waitlist-dialog .eyebrow {
+    margin-right: 2.5rem;
+}
+
+.waitlist-dialog h2 {
+    margin: 0;
+    font-family: var(--PromptCV-serif);
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: -.045em;
+    line-height: 1.1;
+}
+
+.waitlist-description {
+    margin: 1rem 0 1.75rem;
+    color: var(--PromptCV-muted);
+    line-height: 1.75;
+}
+
+.waitlist-form {
+    display: grid;
+    gap: .7rem;
+}
+
+.waitlist-form[hidden] {
+    display: none;
+}
+
+.waitlist-form > label:not(.waitlist-consent) {
+    color: var(--PromptCV-text);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.waitlist-form input[type="email"] {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: .8rem 1rem;
+    border: 1px solid var(--PromptCV-border);
+    border-radius: .7rem;
+    background: var(--PromptCV-bg);
+    color: var(--PromptCV-text);
+}
+
+.waitlist-form input[type="email"]::placeholder {
+    color: #849895;
+}
+
+.waitlist-form input[type="email"]:focus-visible,
+.waitlist-consent input:focus-visible {
+    outline: 2px solid var(--PromptCV-accent);
+    outline-offset: 3px;
+}
+
+.waitlist-consent {
+    display: grid;
+    grid-template-columns: 1.15rem 1fr;
+    align-items: start;
+    gap: .65rem;
+    margin-top: .4rem;
+    color: var(--PromptCV-muted);
+    font-size: .76rem;
+    line-height: 1.6;
+}
+
+.waitlist-consent input {
+    width: 1.05rem;
+    height: 1.05rem;
+    margin: .15rem 0 0;
+    accent-color: var(--PromptCV-accent-deep);
+}
+
+.waitlist-consent a {
+    color: var(--PromptCV-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.waitlist-submit {
+    width: 100%;
+    margin-top: .65rem;
+}
+
+.waitlist-submit:disabled {
+    cursor: wait;
+    opacity: .7;
+    transform: none;
+}
+
+.waitlist-status {
+    min-height: 1.5rem;
+    margin: .2rem 0 0;
+    color: var(--PromptCV-accent);
+    font-size: .85rem;
+}
+
+.waitlist-status.is-error {
+    color: #ffb4a8;
+}
+
+@media (max-width: 480px) {
+    .waitlist-dialog {
+        width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
+        border-radius: 1rem;
+    }
+
+    .waitlist-dialog-panel {
+        padding: 2rem 1.35rem 1.5rem;
+    }
+}
