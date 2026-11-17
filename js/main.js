@@ -8,8 +8,8 @@
     waitlistDialog.className = "waitlist-dialog";
     waitlistDialog.setAttribute("aria-labelledby", "waitlist-title");
     waitlistDialog.setAttribute("aria-describedby", "waitlist-description");
-    const privacyPath = window.location.pathname.includes("/comapny/") ? "../privacy.html" : "privacy.html";
-    const termsPath = window.location.pathname.includes("/comapny/") ? "../terms.html" : "terms.html";
+    const privacyPath = window.location.pathname.includes("/company/") ? "../privacy.html" : "privacy.html";
+    const termsPath = window.location.pathname.includes("/company/") ? "../terms.html" : "terms.html";
     waitlistDialog.innerHTML = `
         <div class="waitlist-dialog-panel">
             <button class="waitlist-dialog-close" type="button" aria-label="Close dialog">&times;</button>

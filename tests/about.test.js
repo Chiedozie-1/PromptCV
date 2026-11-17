@@ -4,7 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.join(__dirname, "..");
-const html = fs.readFileSync(path.join(root, "comapny", "about.html"), "utf8");
+const html = fs.readFileSync(path.join(root, "company", "about.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "css", "about.css"), "utf8");
 
 test("About page introduces NIC Technologies and its purpose", () => {

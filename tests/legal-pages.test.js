@@ -69,7 +69,7 @@ test("clean legal routes and legacy HTML paths resolve without removing existing
 
 test("public page footers link to both legal routes and waitlist links do not change email consent", () => {
     const pageFiles = fs.readdirSync(root).filter((file) => file.endsWith(".html"));
-    const nestedPages = ["about.html", "contact.html"].map((file) => path.join(root, "comapny", file));
+    const nestedPages = ["about.html", "contact.html"].map((file) => path.join(root, "company", file));
     [...pageFiles.map((file) => path.join(root, file)), ...nestedPages]
         .filter((file) => fs.statSync(file).size > 0)
         .forEach((file) => {
